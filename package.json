@@ -4,6 +4,7 @@
   "description": "Build, display, and solve algebraic equations.",
   "main": "algebra.js",
   "scripts": {
+    "prepare": "make bundle",
     "test": "make lint test"
   },
   "repository": {
