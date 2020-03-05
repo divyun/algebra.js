@@ -2,26 +2,37 @@
   "name": "algebra.js",
   "version": "0.2.6",
   "description": "Build, display, and solve algebraic equations.",
-  "main": "algebra.js",
+  "main": "dist/algebra.cjs.js",
+  "module": "dist/algebra.esm.js",
+  "browser": "dist/algebra.umd.js",
   "scripts": {
-    "prepare": "make bundle",
-    "test": "make lint test"
+    "lint": "eslint src test",
+    "build": "rollup -c",
+    "test": "jasmine-node test",
+    "coverage": "nyc jasmine-node --captureExceptions test",
+    "prepare": "npm run build"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/nicolewhite/algebra.js.git"
+    "url": "https://github.com/divyun/algebra.js.git"
   },
   "files": [
-    "algebra.js",
-    "src/"
+    "dist"
   ],
   "devDependencies": {
-    "browserify": "^13.0.1",
-    "coveralls": "^2.11.2",
-    "istanbul": "^0.4.4",
-    "jasmine-node": "^1.14.5",
-    "jshint": "^2.8.0",
-    "uglifyjs": "^2.4.10"
+    "@rollup/plugin-commonjs": "^11.0.2",
+    "@rollup/plugin-node-resolve": "^7.1.1",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-config-prettier": "^6.9.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-jasmine": "^4.1.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "jasmine-node": "^3.0.0",
+    "nyc": "^15.0.0",
+    "prettier": "^1.19.1",
+    "rollup": "^1.32.0",
+    "rollup-plugin-terser": "^5.2.0"
   },
   "keywords": [
     "algebra",
@@ -34,7 +45,8 @@
   "author": "Nicole White",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/nicolewhite/algebra.js/issues"
+    "url": "https://github.com/divyun/algebra.js/issues"
   },
-  "homepage": "http://algebra.js.org"
+  "homepage": "http://algebra.js.org",
+  "dependencies": {}
 }
