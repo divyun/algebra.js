@@ -1,6 +1,6 @@
 {
-  "name": "algebra.js",
-  "version": "0.2.6",
+  "name": "@the.elite/algebra.js",
+  "version": "0.2.7",
   "description": "Build, display, and solve algebraic equations.",
   "main": "dist/algebra.cjs.js",
   "module": "dist/algebra.esm.js",
